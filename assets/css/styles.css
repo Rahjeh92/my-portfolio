@@ -415,7 +415,7 @@ svg {
 }
 
 /*=============== SERVICES ===============*/
-.servics__container {
+.services__container {
   row-gap: 2rem;
   padding-block: 1rem;
 }
@@ -426,7 +426,7 @@ svg {
   padding: 3rem 1.25rem;
   border-radius: 1rem;
   border: 2px solid var(--container-color);
-  transition: border;
+  transition: border .4s;
 }
 
 .services__icon {
@@ -679,7 +679,7 @@ svg {
   .home__container,
   .about__container,
   .skills__container,
-  .servics__container,
+  .services__container,
   .projects__container,
   .contact__container {
     grid-template-columns: 360px;
@@ -720,7 +720,7 @@ svg {
     order: 1;
   }
 
-  .servics__container,
+  .services__container,
   .projects__container {
     grid-template-columns: repeat(2, 352px);
   }
@@ -825,7 +825,7 @@ svg {
     font-size: var(--h3-font-size);
   }
 
-  .servics__container {
+  .services__container {
     grid-template-columns: repeat(3, 352px);
     padding-block: 2.5rem 4rem;
   }

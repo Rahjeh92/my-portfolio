@@ -35,7 +35,6 @@
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
 @media screen and (min-width: 1152px) {
   :root {
     --biggest-font-size: 4rem;
@@ -60,10 +59,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
 input,
 textarea,
-button,
-body {
+button {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
@@ -71,6 +70,8 @@ body {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  cursor: default;
+  user-select: none;
 }
 
 input,
@@ -102,7 +103,7 @@ svg {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== REUSABLE CLASSES ===============*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -140,7 +141,6 @@ svg {
 
 .main {
   overflow: hidden;
-  /* For animation ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -177,7 +177,6 @@ svg {
   cursor: pointer;
 }
 
-/* Navigation for mobile devices */
 @media screen and (max-width: 1023px) {
   .nav__menu {
     position: fixed;
@@ -188,7 +187,6 @@ svg {
     height: 100%;
     padding: 4.5rem 0 0 3rem;
     backdrop-filter: blur(24px);
-    /* For safari */
     -webkit-backdrop-filter: blur(24px);
     transition: right .4s;
   }
@@ -208,7 +206,6 @@ svg {
 
 .nav__link:hover {
   color: var(--first-color);
-
 }
 
 .nav__close {
@@ -217,13 +214,10 @@ svg {
   right: 1.5rem;
 }
 
-/* Show menu */
 .show-menu {
   right: 0;
-
 }
 
-/* Add blur to header */
 .blur-header {
   background-color: transparent;
 }
@@ -231,23 +225,21 @@ svg {
 .blur-header::after {
   content: "";
   position: absolute;
-  width: 1000%;
+  width: 100%;
   height: 100%;
   background-color: hsla(0, 0%, 10%, .3);
   backdrop-filter: blur(24px);
-  /* For Safari*/
   -webkit-backdrop-filter: blur(24px);
   top: 0;
   left: 0;
   z-index: -1;
 }
 
-/* Active link */
 .active-link {
   color: var(--first-color);
 }
 
-/*=============== HOME ===============*/
+/*=============== HOME SECTION ===============*/
 .home {
   background-color: var(--container-color);
 }
@@ -316,7 +308,7 @@ svg {
 }
 
 
-/*=============== BUTTON ===============*/
+/*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -366,6 +358,13 @@ svg {
   row-gap: 3.5rem;
 }
 
+.skills__button {
+  display: block;
+  margin: 2rem auto 0;
+  width: max-content;
+  text-align: center;
+}
+
 .skills__data {
   text-align: center;
 }
@@ -374,20 +373,17 @@ svg {
   margin-bottom: 2rem;
 }
 
-.skills__content,
-.skills__group {
-  display: grid;
-}
-
+/* responsive skills grid */
 .skills__content {
-  grid-template-columns: repeat(2, max-content);
-  column-gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
   justify-content: center;
-  align-items: baseline;
 }
 
 .skills__group {
   row-gap: 1rem;
+  padding-left: 3rem;
   list-style: decimal-leading-zero;
 }
 
@@ -402,7 +398,9 @@ svg {
 
 /*=============== SERVICES ===============*/
 .services__container {
-  row-gap: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   padding-block: 1rem;
 }
 
@@ -437,20 +435,24 @@ svg {
 }
 
 .projects__container {
-  row-gap: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   justify-content: center;
   padding-block: 1rem;
 }
 
 .projects__card {
   position: relative;
-  border-radius: 1rem;
   overflow: hidden;
+  border-radius: 1rem;
+  aspect-ratio: 16/9;
 }
 
 .projects__img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .projects__modal {
@@ -459,11 +461,8 @@ svg {
   bottom: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(var(--hue), 70%, 40%, .8) 120%);
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, hsla(var(--hue), 70%, 40%, .8) 120%);
   backdrop-filter: blur(4px);
-  /* For Safari*/
   -webkit-backdrop-filter: blur(4px);
   border-radius: 1rem;
   display: flex;
@@ -480,7 +479,6 @@ svg {
 }
 
 .projects__subtitle {
-  display: block;
   margin-bottom: .25rem;
 }
 
@@ -502,12 +500,20 @@ svg {
 
 .projects__card:hover .projects__modal {
   bottom: 0;
-
 }
 
 /*=============== CONTACT ===============*/
 .contact__container {
-  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .contact__form,
@@ -525,7 +531,6 @@ svg {
   border-radius: .5rem;
   background-color: var(--container-color);
   color: var(--title-color);
-
 }
 
 .contact__input::placeholder {
@@ -617,7 +622,7 @@ svg {
   background-color: hsl(228, 8%, 45%);
 }
 
-/*=============== SCROLL UP ===============*/
+/*=============== SCROLL UP BUTTON ===============*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -637,29 +642,26 @@ svg {
   transform: translateY(-.25rem);
 }
 
-/* Show Scroll Up */
 .show-scroll {
   bottom: 3rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/*=============== MEDIA QUERIES ===============*/
 @media screen and (max-width: 320px) {
   .container {
     margin-inline: 1rem;
   }
 
-  .skills__content {
-    grid-template-columns: max-content;
-    row-gap: 1rem;
-  }
-
   .services__card {
     padding-block: 1.5rem;
   }
+
+  .skills__group {
+    padding-left: 1.5rem;
+    /* space from left */
+  }
 }
 
-/* For medium devices */
 @media screen and (min-width: 576px) {
 
   .home__container,
@@ -668,15 +670,30 @@ svg {
   .services__container,
   .projects__container,
   .contact__container {
-    grid-template-columns: 360px;
     justify-content: center;
+  }
 
+  .skills__group {
+    padding-left: 1.5rem;
+    /* space from left */
   }
 }
 
 @media screen and (min-width: 768px) {
   .nav__menu {
     width: 55%;
+  }
+
+  .home__content {
+    align-items: flex-start;
+    /* Prevent vertical centering causing empty space */
+  }
+
+  .home__image {
+    margin-top: 0;
+    /* Remove extra top margin */
+    height: auto;
+    /* Prevent forcing full height */
   }
 
   .home__container,
@@ -688,8 +705,7 @@ svg {
 
   .home__data,
   .about__data,
-  .skills__data,
-  :is(.about__data, .skills__data) :is(.section__subtitle, .section__title) {
+  .skills__data {
     text-align: initial;
   }
 
@@ -705,22 +721,11 @@ svg {
   .about__data {
     order: 1;
   }
-
-  .services__container,
-  .projects__container {
-    grid-template-columns: repeat(2, 352px);
-  }
-
 }
 
-/* For large devices */
 @media screen and (min-width: 1023px) {
   .section {
     padding-block: 7rem 2rem;
-  }
-
-  .section__subtitle {
-    font-size: var(--normal-font-size);
   }
 
   .nav {
@@ -739,12 +744,6 @@ svg {
 
   .nav__menu {
     width: initial;
-  }
-
-  .blur-header::after {
-    backdrop-filter: blur(25px);
-    /* For Safari*/
-    -webkit-backdrop-filter: blur(25px);
   }
 }
 
@@ -767,17 +766,9 @@ svg {
     row-gap: 4.5rem;
   }
 
-  .home__description {
-    margin-block: 1.5rem 2.5rem;
-  }
-
-  .home__social {
-    column-gap: 1.5rem;
-  }
-
   .about__container {
     grid-template-columns: 550px 460px;
-    column-gap: 4.5rem;
+    column-gap: 7rem;
     padding-bottom: 1rem;
   }
 
@@ -799,20 +790,8 @@ svg {
     margin-bottom: 3rem;
   }
 
-  .skills__content {
-    column-gap: 8rem;
-  }
-
-  .skills__group {
-    row-gap: 1.5rem;
-  }
-
-  .skills__item {
-    font-size: var(--h3-font-size);
-  }
-
   .services__container {
-    grid-template-columns: repeat(3, 352px);
+    grid-template-columns: repeat(3, 330px);
     padding-block: 2.5rem 4rem;
   }
 
@@ -821,14 +800,13 @@ svg {
   }
 
   .projects__container {
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(2, 500px);
     row-gap: 3rem;
     padding-block: 2.5rem 4rem;
   }
 
-  .projects__button {
-    font-size: var(--normal-font-size);
-
+  .projects__card {
+    border-radius: 1.25rem;
   }
 
   .contact__container {
@@ -850,11 +828,12 @@ svg {
   }
 
   .contact__form textarea {
-    height: 20rem;
+    height: 13rem;
+    margin-bottom: 3rem;
   }
 
   .footer {
-    padding-block: 4.5rem 4rem;
+    padding-block: 4.5rem 3rem;
   }
 
   .footer__container {
@@ -864,19 +843,15 @@ svg {
   }
 
   .footer__title {
-    font-size: var(--bigger-font-size);
+    font-size: var(--h2-font-size);
   }
 
   .footer__social {
-    column-gap: 1.5rem;
+    justify-content: center;
   }
 
   .footer__copy {
     margin: 0;
     justify-self: flex-end;
-  }
-
-  .scrollup {
-    right: 3rem;
   }
 }

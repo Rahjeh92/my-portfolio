@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
    <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
    <!--=============== REMIXICONS ===============-->
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
 
    <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="assets/css/styles.css">
+   <link rel="stylesheet" href="assets/css/styles.css" />
 
    <title>My Portfolio</title>
 </head>
@@ -21,28 +21,22 @@
    <!--==================== HEADER ====================-->
    <header class="header" id="header">
       <nav class="nav container">
-         <a href="#" class="nav__logo">
-            Zain <span>Rahjeh</span>
-         </a>
+         <a href="#" class="nav__logo">Zain <span>Rahjeh</span></a>
 
          <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                <li class="nav__item">
                   <a href="#home" class="nav__link active-link">Home</a>
                </li>
-
                <li class="nav__item">
                   <a href="#about" class="nav__link">About</a>
                </li>
-
                <li class="nav__item">
                   <a href="#services" class="nav__link">Services</a>
                </li>
-
                <li class="nav__item">
                   <a href="#projects" class="nav__link">Projects</a>
                </li>
-
                <li class="nav__item">
                   <a href="#contact" class="nav__link">Contact</a>
                </li>
@@ -63,7 +57,6 @@
 
    <!--==================== MAIN ====================-->
    <main class="main">
-
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
          <div class="home__container container grid">
@@ -74,13 +67,11 @@
                   </h3>
 
                   <h1 class="home__title">Zain Rahjeh</h1>
-
                   <h3 class="home__education">Web Developer</h3>
 
                   <p class="home__description">
-                     With knowledge in web development and
-                     design, I offer the best projects resulting
-                     in quality work.
+                     With knowledge in web development and design, I offer the best
+                     projects resulting in quality work.
                   </p>
 
                   <a href="#contact" class="button">Let's Talk</a>
@@ -102,6 +93,7 @@
             </div>
 
             <div class="home__image">
+               <!-- للحفاظ على القص الصحيح واللون -->
                <svg class="home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
                   <mask id="maskBlob" mask-type="alpha">
                      <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
@@ -116,7 +108,6 @@
                      447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
                      587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
                      438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
-
                      <rect x="37" width="476" height="630" fill="url(#pattern0)" />
                   </g>
 
@@ -142,22 +133,17 @@
       <section class="about section" id="about">
          <div class="about__container container grid">
             <div class="about__data">
-               <h3 class="section__subtitle">
-                  My <span>Intro</span>
-               </h3>
-
-               <h2 class="section__title">
-                  About Me
-               </h2>
+               <h3 class="section__subtitle">My <span>Intro</span></h3>
+               <h2 class="section__title">About Me</h2>
 
                <p class="about__description">
-                  Frontend developer, I create web pages with
-                  UI / UX user interface, I have years of
-                  experience and many clients are happy with the
+                  Frontend developer, I create web pages with UI / UX user interface,
+                  I have years of experience and many clients are happy with the
                   projects carried out.
                </p>
 
-               <a href="contact" class="button">Contact Me</a>
+               <!-- الرابط المؤشر على نفس الصفحة -->
+               <a href="#contact" class="button">Contact Me</a>
             </div>
 
             <div class="about__image">
@@ -171,7 +157,6 @@
                   </mask>
                   <g mask="url(#maskBorder)">
                      <rect x="37" width="476" height="630" fill="url(#pattern2)" />
-
                      <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
                      192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
                      580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
@@ -202,151 +187,160 @@
       <section class="skills section">
          <div class="skills__container container grid">
             <div class="skills__data">
-               <h3 class="section__subtitle">
-                  Favorite <span>Skills</span>
-               </h3>
-
-               <h2 class="section__title">
-                  My Skills
-               </h2>
-
+               <h3 class="section__subtitle">Favorite <span>Skills</span></h3>
+               <h2 class="section__title">My Skills</h2>
                <p class="skills__description">
-                  See fully what skills I have and perform,
-                  to develop the projects for you.
+                  See fully what skills I have and perform, to develop the projects for you.
                </p>
-
-               <a href="#projects" class="button">See Projects</a>
+               <a href="#projects" class="button skills__button">See Projects</a>
             </div>
 
             <div class="skills__content">
+               <!-- First skills group -->
                <ol class="skills__group">
                   <li class="skills__item">HTML & CSS</li>
                   <li class="skills__item">JavaScript</li>
                   <li class="skills__item">Bootstrap</li>
-                  <li class="skills__item">React</li>
+                  <li class="skills__item">Photo & Video Editing</li>
                </ol>
 
+               <!-- Second skills group -->
                <ol class="skills__group" start="5">
-                  <li class="skills__item">Git & GitHub</li>
-                  <li class="skills__item">Figma</li>
-                  <li class="skills__item">Sketch</li>
+                  <li class="skills__item">Social Media Marketing</li>
+                  <li class="skills__item">Content Creation (Reels & Posts)</li>
+                  <li class="skills__item">Meta Ads (Facebook & Instagram)</li>
+                  <li class="skills__item">Google Ads</li>
                </ol>
             </div>
-         </div>
+
       </section>
 
       <!--==================== SERVICES ====================-->
       <section class="services section" id="services">
          <h3 class="section__subtitle">
-            My <span>Services
+            My <span>Services</span>
          </h3>
 
-         <h2 class="section__title">
-            What I Do
-         </h2>
+         <h2 class="section__title">What I Do</h2>
 
          <div class="services__container container grid">
+            <!-- Service: Web Development -->
             <article class="services__card">
-               <i class="ri-layout-3-line services__icon"></i>
-
-               <h2 class="services__title">Web Developer</h2>
-
+               <i class="ri-code-s-slash-line services__icon"></i>
+               <h2 class="services__title">Web Development</h2>
                <p class="services__description">
-                  Development of custom web pages.
-                  Using current technologies and
-                  libraries of the labor field.
+                  Building modern, responsive websites using HTML, CSS, JavaScript, and Bootstrap.
                </p>
             </article>
 
+            <!-- Service: Photo & Video Editing -->
             <article class="services__card">
-               <i class="ri-pantone-line services__icon"></i>
-
-               <h2 class="services__title">UI/UX Designer</h2>
-
+               <i class="ri-movie-line services__icon"></i>
+               <h2 class="services__title">Photo & Video Editing</h2>
                <p class="services__description">
-                  I offer design of web interfaces and
-                  mobile applications, design made in
-                  figma, adobe xd and sketch.
+                  Professional editing for photos and videos to create high-quality content for brands and social media.
                </p>
             </article>
 
+            <!-- Service: Content Creation -->
             <article class="services__card">
-               <i class="ri-pen-nib-line services__icon"></i>
-
-               <h2 class="services__title">Graphic Design</h2>
-
+               <i class="ri-instagram-line services__icon"></i>
+               <h2 class="services__title">Content Creation (Reels & Posts)</h2>
                <p class="services__description">
-                  I make designs at the client's request,
-                  banner design, posters, digital
-                  designs among others.
+                  Engaging Instagram reels and posts designed to connect with your audience.
+               </p>
+            </article>
+
+            <!-- Service: Social Media Marketing -->
+            <article class="services__card">
+               <i class="ri-share-forward-line services__icon"></i>
+               <h2 class="services__title">Social Media Marketing</h2>
+               <p class="services__description">
+                  Managing and growing social media presence with creative strategies.
+               </p>
+            </article>
+
+            <!-- Service: Google Ads -->
+            <article class="services__card">
+               <i class="ri-google-line services__icon"></i>
+               <h2 class="services__title">Google Ads</h2>
+               <p class="services__description">
+                  Running and optimizing Google Ads campaigns to increase traffic and conversions.
+               </p>
+            </article>
+
+            <!-- Service: Meta Ads -->
+            <article class="services__card">
+               <i class="ri-facebook-circle-line services__icon"></i>
+               <h2 class="services__title">Meta Ads (Facebook & Instagram)</h2>
+               <p class="services__description">
+                  Creating and optimizing targeted ad campaigns on both Facebook and Instagram to maximize reach and
+                  conversions.
                </p>
             </article>
 
          </div>
+
       </section>
 
       <!--==================== PROJECTS ====================-->
       <section class="projects section" id="projects">
-         <h3 class="section__subtitle">
-            My <span>Jobs</span>
-         </h3>
-
-         <h2 class="section__title">
-            Recent Projects
-         </h2>
+         <h3 class="section__subtitle">My <span>Jobs</span></h3>
+         <h2 class="section__title">Recent Projects</h2>
 
          <div class="projects__container container grid">
-<article class="projects__card">
-               <img src="assets/img/project-img-0.jpg" alt="projects image" class="projects__img">
 
-               <div class="projects__modal">
-                  <span class="projects__subtitle">Website</span>
-
-                  <h2 class="projects__title">My Favorite Teacher</h2>
-
-                  <a href="https://zainr92.github.io/my-favorite-teacher/" class="projects__button">
-                     View <i class="ri-external-link-line"></i>
-                  </a>
-               </div>
-            </article>
-            
+            <!--==================== PROJECT CARD ====================-->
             <article class="projects__card">
-               <img src="assets/img/project-img-1.jpg" alt="projects image" class="projects__img">
-
+               <!-- Project thumbnail (replace with your own screenshot or logo) -->
+               <img src="assets/img/project-shisha-bar.png" alt="Shisha Bar project" class="projects__img">
+               <!-- Project modal overlay -->
                <div class="projects__modal">
+                  <!-- Project type -->
                   <span class="projects__subtitle">Website</span>
-
-                  <h2 class="projects__title">TinDog</h2>
-
-                  <a href="https://zainr92.github.io/TinDog/" class="projects__button">
+                  <!-- Project title -->
+                  <h2 class="projects__title">Why Not? Shisha Bar</h2>
+                  <!-- Project link (opens in a new tab) -->
+                  <a href="https://shisha-bar.github.io/why-not/" target="_blank" class="projects__button">
                      View <i class="ri-external-link-line"></i>
                   </a>
                </div>
             </article>
 
+            <!--==================== PROJECT CARD ====================-->
             <article class="projects__card">
-               <img src="assets/img/project-img-2.jpg" alt="projects image" class="projects__img">
+               <!-- Project thumbnail (replace with your own screenshot or logo) -->
+               <img src="assets/img/project-tindog.png" alt="Shisha Bar project" class="projects__img">
+               <!-- Project modal overlay -->
+               <div class="projects__modal">
+                  <!-- Project type -->
+                  <span class="projects__subtitle">Website</span>
+                  <!-- Project title -->
+                  <h2 class="projects__title">TinDog App</h2>
+                  <!-- Project link (opens in a new tab) -->
+                  <a href="https://rahjeh92.github.io/TinDog/" target="_blank" class="projects__button">
+                     View <i class="ri-external-link-line"></i>
+                  </a>
+               </div>
+            </article>
 
+            <article class="projects__card">
+               <img src="assets/img/project-simon-game.png" alt="projects image" class="projects__img" />
                <div class="projects__modal">
                   <span class="projects__subtitle">Website</span>
-
                   <h2 class="projects__title">Simon Game</h2>
-
-                  <a href="https://zainr92.github.io/simon-game/" class="projects__button">
+                  <a href="https://rahjeh92.github.io/simon-game/" class="projects__button">
                      View <i class="ri-external-link-line"></i>
                   </a>
                </div>
             </article>
 
             <article class="projects__card">
-               <img src="assets/img/project-img-3.jpg" alt="projects image" class="projects__img">
-
+               <img src="assets/img/project-drum-kit.png" alt="projects image" class="projects__img" />
                <div class="projects__modal">
                   <span class="projects__subtitle">Website</span>
-
                   <h2 class="projects__title">Drum Kit</h2>
-
-                  <a href="https://zainr92.github.io/drum-kit/" class="projects__button">
+                  <a href="https://rahjeh92.github.io/drum-kit/" class="projects__button">
                      View <i class="ri-external-link-line"></i>
                   </a>
                </div>
@@ -365,71 +359,59 @@
          </h2>
 
          <div class="contact__container container grid">
-            <form action="" class="contact__form" id="contact-form">
+            <!-- ✅ Formspree form -->
+            <form action="https://formspree.io/f/mdkwzgvp" method="POST" class="contact__form">
                <div class="contact__group">
-                  <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
-                  <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
+                  <input type="text" name="name" placeholder="Enter your name" class="contact__input" required>
+                  <input type="email" name="email" placeholder="Enter your email" class="contact__input" required>
                </div>
 
-               <textarea name="user_project" required placeholder="Enter your message"
-                  class="contact__input"></textarea>
+               <textarea name="message" placeholder="Enter your message" class="contact__input" required></textarea>
 
-               <p class="contact__message" id="contact-message"></p>
-
-               <button type="submit" class="button contact__button">
-                  Send Message
-               </button>
+               <button type="submit" class="button contact__button">Send Message</button>
             </form>
          </div>
       </section>
-   </main>
 
-   <!--==================== FOOTER ====================-->
-   <footer class="footer">
-      <div class="footer__container container grid">
-         <div>
-            <h1 class="footer__title">
-               Zain <span>Rahjeh</span>
-            </h1>
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <div>
+               <h1 class="footer__title">Zain <span>Rahjeh</span></h1>
+               <h2 class="footer__education">Computer Engineer</h2>
+            </div>
 
-            <h2 class="footer__education">
-               Computer Engineer
-            </h2>
+            <div class="footer__social">
+               <a href="https://www.facebook.com/Zainrahjeh" target="_blank" class="footer__social-link">
+                  <i class="ri-facebook-circle-line"></i>
+               </a>
+
+               <a href="https://www.instagram.com/zain_rahjeh/" target="_blank" class="footer__social-link">
+                  <i class="ri-instagram-line"></i>
+               </a>
+
+               <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                  <i class="ri-twitter-line"></i>
+               </a>
+            </div>
+
+            <span class="footer__copy">© 2024 Copyright Zain Rahjeh. All rights reserved.</span>
          </div>
+      </footer>
 
-         <div class="footer__social">
-            <a href="https://www.facebook.com/Zainrahjeh" target="_blank" class="footer__social-link">
-               <i class="ri-facebook-circle-line"></i>
-            </a>
+      <!--========== SCROLL UP ==========-->
+      <a href="" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
 
-            <a href="https://www.instagram.com/zain_rahjeh/" target="_blank" class="footer__social-link">
-               <i class="ri-instagram-line"></i>
-            </a>
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
 
-            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
-               <i class="ri-twitter-line"></i>
-            </a>
-         </div>
+      <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-         <span class="footer__copy">
-            © 2024 Copyright Zain Rahjeh. All rights reserved.
-         </span>
-      </div>
-   </footer>
-
-   <!--========== SCROLL UP ==========-->
-   <a href="" class="scrollup" id="scroll-up">
-      <i class="ri-arrow-up-line"></i>
-   </a>
-
-   <!--=============== SCROLLREVEAL ===============-->
-   <script src="assets/js/scrollreveal.min.js"></script>
-
-   <!--=============== EMAIL JS ===============-->
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-   <!--=============== MAIN JS ===============-->
-   <script src="assets/js/main.js"></script>
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
 </body>
 
 </html>
